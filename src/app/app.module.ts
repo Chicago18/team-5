@@ -12,6 +12,7 @@ import {Keyboard} from '@ionic-native/keyboard';
 import {ActivityService} from "../services/activity-service";
 import {TripService} from "../services/trip-service";
 import {WeatherProvider} from "../services/weather";
+import {ERGsService} from "../services/ERGs-service";
 
 import {MyApp} from "./app.component";
 
@@ -25,6 +26,8 @@ import {SearchLocationPage} from "../pages/search-location/search-location";
 import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
+import {ERGsPage} from "../pages/ERGs/ERGs";
+import {PopupERGPage} from "../pages/popupERG/popupERG";
 import {ProfilePage} from "../pages/profile/profile";
 import {EditProfilePage} from "../pages/edit-profile/edit-profile";
 import { AuthProvider } from '../providers/auth/auth';
@@ -52,6 +55,8 @@ import {TrainingPage} from '../pages/training/training';
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
+    ERGsPage,
+    PopupERGPage,
     ProfilePage,
     EditProfilePage,
     TrainingPage
@@ -82,6 +87,8 @@ import {TrainingPage} from '../pages/training/training';
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
+    ERGsPage,
+    PopupERGPage,
     ProfilePage,
     EditProfilePage,
     TrainingPage
@@ -94,7 +101,8 @@ import {TrainingPage} from '../pages/training/training';
     TripService,
     WeatherProvider,
     AuthProvider,
-    StreamingMedia
+    StreamingMedia,
+    ERGsService
   ]
 })
 

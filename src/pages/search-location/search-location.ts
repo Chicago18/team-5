@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController, NavParams} from "ionic-angular";
 import {Storage} from '@ionic/storage';
+import {ERGsPage} from "../ERGs/ERGs";
 
 // import {SearchCarsPage} from "../search-cars/search-cars";
 
@@ -60,7 +61,6 @@ export class SearchLocationPage {
     if (this.fromto === 'to') {
       this.storage.set('dropOff', item.name);
     }
-    // this.nav.push(SearchCarsPage);
     this.nav.pop();
   }
 }
