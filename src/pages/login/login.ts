@@ -28,7 +28,7 @@ export class LoginPage {
   forgotPass() {
     let forgot = this.forgotCtrl.create({
       title: 'Forgot Password?',
-      message: "Enter you email address to send a reset link password.",
+      message: "Enter your email address to send a reset link password.",
       inputs: [
         {
           name: 'email',
