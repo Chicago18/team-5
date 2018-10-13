@@ -27,6 +27,9 @@ import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import {ERGsPage} from "../pages/ERGs/ERGs";
 import {PopupERGPage} from "../pages/popupERG/popupERG";
+import {ProfilePage} from "../pages/profile/profile";
+import {EditProfilePage} from "../pages/edit-profile/edit-profile";
+import { AuthProvider } from '../providers/auth/auth';
 
 // import services
 // end import services
@@ -48,8 +51,11 @@ import {PopupERGPage} from "../pages/popupERG/popupERG";
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
+    ERG-page
     ERGsPage,
     PopupERGPage
+    ProfilePage,
+    EditProfilePage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +68,7 @@ import {PopupERGPage} from "../pages/popupERG/popupERG";
     IonicStorageModule.forRoot({
       name: '__ionic3_start_theme',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -79,6 +85,8 @@ import {PopupERGPage} from "../pages/popupERG/popupERG";
     TripsPage,
     ERGsPage,
     PopupERGPage
+    ProfilePage,
+    EditProfilePage
   ],
   providers: [
     StatusBar,
@@ -88,6 +96,7 @@ import {PopupERGPage} from "../pages/popupERG/popupERG";
     TripService,
     WeatherProvider,
     ERGsService
+    AuthProvider
   ]
 })
 
