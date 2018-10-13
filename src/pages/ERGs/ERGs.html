@@ -1,0 +1,89 @@
+<!-- -->
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+        <span ion-text>ERG Registry</span>
+      </ion-title>
+    </ion-navbar>
+  
+    <!--  -->
+    <ion-toolbar padding color="light">
+            <button ion-text class="text-black" ng-click="filterPopup()">Filter</button>
+            <ion-item>
+                    <ion-label>
+                      Search
+                    </ion-label>
+                <ion-input type="search-word"></ion-input>
+                  </ion-item>
+                <p align="right" ion-text no-margin class="text-white">
+                    <strong>4</strong> results found!   <!--make variable for search results-->
+                </p>
+    </ion-toolbar>
+  </ion-header>
+
+  
+
+  <ion-content padding class="trips detail-bg">
+    <!--list of trips-->
+    <ion-list no-margin>
+        <ion-item class="primary-bg">
+            <ion-grid padding>
+                <ion-row>
+                   <ion-col width-53>
+                        <h2 ion-text class="text-white bold">ERG Name</h2>
+                    </ion-col>
+                    <ion-col col-2>
+                    <span ion-text class="text-white">Location</span>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col width-53>
+                        <h2 ion-text class="text-white bold">Contact Info</h2>
+                        </ion-col>
+                        <ion-col col-2>
+                        <button ion-text class="text-white bold" tappable (click)="filterPopup()">More</button>
+                    </ion-col>
+                </ion-row>                
+            </ion-grid>
+        </ion-item>
+        <ion-item class="primary-bg">
+            <ion-grid padding>
+                <ion-row>
+                    <ion-col width-66>
+                    <h2 ion-text class="text-white bold">ERG Name</h2>
+                    </ion-col>
+                    <ion-col col-2>
+                    <span ion-text class="text-white">Location</span>                           
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col width-53>
+                        <h2 ion-text class="text-white bold">Contact Info</h2>
+                        </ion-col>
+                        <ion-col col-2>
+                        <button ion-text class="text-white bold" tappable (click)="filterPopup()">More</button>
+                    </ion-col>
+                </ion-row> 
+            </ion-grid>
+        </ion-item>
+    </ion-list>
+
+
+    <div class="erg card" *ngFor="let trip of trips" tappable (click)="viewDetail(erg.id)" margin-bottom>
+      <div class="background border-bottom" [ngStyle]="{'background-image': 'url(' + trip.thumb + ')'}">
+        <div class="background-filter rlt">
+          <div class="align-bottom" padding-left padding-right>
+            <h6 class="pull-left text-white" ion-text>{{ trip.name }}</h6>
+            <h6 class="pull-right text-white" ion-text>{{ trip.price_adult | currency:'USD':true }}</h6>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="padding-sm primary-bg">
+        <ion-icon name="time" class="text-white"></ion-icon>
+        <span ion-text class="text-white">{{ trip.time }}</span>
+        <span class="pull-right" ion-text color="light"><strong>per adult</strong> (childs has <span ion-text  class="text-green bold">50% OFF</span>)</span>
+      </div>
+    </div>
+  </ion-content>
+  

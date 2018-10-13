@@ -42,3 +42,4 @@ config/webpack.config.js
 package-lock.json
 src/config/app.config.ts
 src/declarations.d.ts
+.sourcemaps
