@@ -25,6 +25,7 @@ export class RegisterPage {
     console.log('this.signUpForm', this.signUpForm.value);
     const {firstName, lastName, email, password} = this.signUpForm.value;
     this.authProvider.signUpUser(email, password, firstName, lastName);
+    this.nav.setRoot(LoginPage);
   }
 
   // go to login page
