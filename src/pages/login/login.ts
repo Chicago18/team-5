@@ -32,11 +32,12 @@ export class LoginPage {
   // login and go to home page
   login() {
     const {email, password} = this.loginForm.value;
-    this.authProvider.loginUser(email, password);
-    this.nav.setRoot(HomePage);
+    this.authProvider.loginUser(email, password).then(() => this.nav.setRoot(HomePage))
+      .catch((error) => {
+        console.log('Error logging in:', error);
+        this.nav.setRoot(LoginPage);
+      });
   }
-
-
 
   forgotPass() {
     let forgot = this.forgotCtrl.create({

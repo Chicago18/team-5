@@ -40,4 +40,9 @@ export class AuthProvider {
       })
       .catch((error) => console.log('Error creating new user', error));
   }
+
+  logoutUser() {
+    return firebase.auth().signOut();
+  }
+
 }
