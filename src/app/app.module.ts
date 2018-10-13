@@ -32,7 +32,7 @@ import {ProfilePage} from "../pages/profile/profile";
 import {EditProfilePage} from "../pages/edit-profile/edit-profile";
 import { AuthProvider } from '../providers/auth/auth';
 import {TrainingPage} from '../pages/training/training';
-
+import {ErrorMessageComponent} from "../components/error-message/error-message";
 
 
 // import services
@@ -59,7 +59,8 @@ import {TrainingPage} from '../pages/training/training';
     PopupERGPage,
     ProfilePage,
     EditProfilePage,
-    TrainingPage
+    TrainingPage,
+    ErrorMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +92,8 @@ import {TrainingPage} from '../pages/training/training';
     PopupERGPage,
     ProfilePage,
     EditProfilePage,
-    TrainingPage
+    TrainingPage,
+    ErrorMessageComponent
   ],
   providers: [
     StatusBar,

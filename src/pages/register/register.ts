@@ -23,7 +23,8 @@ export class RegisterPage {
   // register and go to home page
   register() {
     const {firstName, lastName, email, password} = this.signUpForm.value;
-    this.authProvider.signUpUser(email, password, firstName, lastName);
+    this.authProvider.signUpUser(email, password, firstName, lastName).then(() => console.log('sucessfully signed up user'))
+      .catch((error) => console.log('error signing up', error));
     this.nav.setRoot(LoginPage);
   }
 

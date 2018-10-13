@@ -25,10 +25,12 @@
         <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
     </form>
-
+    <div *ngIf="error" align-items-center="true">
+      <p style="color: red">Incorrect email or password.</p>
+    </div>
 
     <div padding-top>
-      <button ion-button icon-start block color="dark" tappable (click)="login()">
+      <button ion-button icon-start block color="dark" [disabled]="" tappable (click)="login()">
         Sign In
       </button>
     </div>
@@ -40,7 +42,5 @@
         Sign Up
       </button>
     </div>
-
-
   </div>
 </ion-content>
