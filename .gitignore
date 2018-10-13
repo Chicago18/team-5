@@ -36,3 +36,5 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 package-lock.json
 src/environments
+.env
+src/providers/auth
