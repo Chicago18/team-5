@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController} from "ionic-angular";
 import {LoginPage} from "../login/login";
-import {HomePage} from "../home/home";
+import {Validators, FormBuilder, FormGroup } from "@angular/forms";
 
 
 @Component({
@@ -9,13 +9,19 @@ import {HomePage} from "../home/home";
   templateUrl: 'register.html'
 })
 export class RegisterPage {
-
-  constructor(public nav: NavController) {
+  private signUpForm : FormGroup;
+  constructor(public nav: NavController, private formBuilder: FormBuilder) {
+    this.signUpForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+    });
   }
 
   // register and go to home page
   register() {
-    this.nav.setRoot(HomePage);
+    console.log('this.signUpForm', this.signUpForm.value);
   }
 
   // go to login page
