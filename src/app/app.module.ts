@@ -34,6 +34,8 @@ import { AuthProvider } from '../providers/auth/auth';
 import {TrainingPage} from '../pages/training/training';
 import {ErgPage} from '../pages/erg/erg';
 import {ErgprofilePage} from '../pages/ergprofile/ergprofile';
+import {ErrorMessageComponent} from "../components/error-message/error-message";
+
 
 // import services
 // end import services
@@ -61,7 +63,8 @@ import {ErgprofilePage} from '../pages/ergprofile/ergprofile';
     EditProfilePage,
     TrainingPage,
     ErgPage,
-    ErgprofilePage
+    ErgprofilePage,
+    ErrorMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -95,7 +98,8 @@ import {ErgprofilePage} from '../pages/ergprofile/ergprofile';
     EditProfilePage,
     TrainingPage,
     ErgPage,
-    ErgprofilePage
+    ErgprofilePage,
+    ErrorMessageComponent
   ],
   providers: [
     StatusBar,
