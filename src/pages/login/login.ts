@@ -14,6 +14,8 @@ import { HomePage } from "../home/home";
 })
 export class LoginPage {
 
+  public loginForm: FormGroup
+
   constructor(public nav: NavController, public forgotCtrl: AlertController, private formBuilder: FormBuilder, public menu: MenuController, public toastCtrl: ToastController, public authProvider: AuthProvider) {
     this.menu.swipeEnable(false);
     this.loginForm = this.formBuilder.group({
