@@ -35,4 +35,10 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 package-lock.json
-src/environments/environment.ts
+src/environments
+.env
+src/providers/auth
+config/webpack.config.js
+package-lock.json
+src/config/app.config.ts
+src/declarations.d.ts
