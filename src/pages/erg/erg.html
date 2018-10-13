@@ -17,6 +17,8 @@
 
 <ion-content padding>
 
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
     <ion-item-group>
         <ion-item-divider color="gray">AA</ion-item-divider>
         <ion-item (click)="goToProfile($event)">Blue Pride</ion-item>
