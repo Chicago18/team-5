@@ -1,0 +1,72 @@
+page-profile {
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    padding-bottom: 30px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .title {
+      color: grey;
+      font-size: 18px;
+  }
+
+  a {
+      text-decoration: none;
+      font-size: 20px;
+  }
+
+  #mail {
+      font-size: 18px;
+  }
+
+  p {
+      font-size: 18px;
+      color: black;
+  }
+
+  h1 {
+    color: black;
+  }
+
+  button:hover, a:hover {
+      opacity: 0.7;
+  }
+
+  #twitter {
+    color: #00ACED;
+  }
+
+  #linkedin {
+    color: #0077B5;
+  }
+
+  #facebook {
+    color: #3B5998;
+  }
+
+  .label {
+    font-size: 14px;
+    line-height: 35px;
+  }
+
+  #social {
+    padding-top: 40px;
+  }
+
+  .social {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #brush {
+    font-size: 35px;
+  }
+
+  .brush {
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+
+}

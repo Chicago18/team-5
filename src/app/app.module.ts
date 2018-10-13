@@ -11,6 +11,7 @@ import {Keyboard} from '@ionic-native/keyboard';
 import {ActivityService} from "../services/activity-service";
 import {TripService} from "../services/trip-service";
 import {WeatherProvider} from "../services/weather";
+import {ERGsService} from "../services/ERGs-service";
 
 import {MyApp} from "./app.component";
 
@@ -24,6 +25,11 @@ import {SearchLocationPage} from "../pages/search-location/search-location";
 import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
+import {ERGsPage} from "../pages/ERGs/ERGs";
+import {PopupERGPage} from "../pages/popupERG/popupERG";
+import {ProfilePage} from "../pages/profile/profile";
+import {EditProfilePage} from "../pages/edit-profile/edit-profile";
+import { AuthProvider } from '../providers/auth/auth';
 
 // import services
 // end import services
@@ -44,7 +50,11 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
     RegisterPage,
     SearchLocationPage,
     TripDetailPage,
-    TripsPage
+    TripsPage,
+    ERGsPage,
+    PopupERGPage,
+    ProfilePage,
+    EditProfilePage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +67,7 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
     IonicStorageModule.forRoot({
       name: '__ionic3_start_theme',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -71,7 +81,11 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
     RegisterPage,
     SearchLocationPage,
     TripDetailPage,
-    TripsPage
+    TripsPage,
+    ERGsPage,
+    PopupERGPage,
+    ProfilePage,
+    EditProfilePage
   ],
   providers: [
     StatusBar,
@@ -79,7 +93,9 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
     Keyboard,
     ActivityService,
     TripService,
-    WeatherProvider
+    WeatherProvider,
+    ERGsService,
+    AuthProvider
   ]
 })
 

@@ -5,8 +5,9 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      <strong>Ionic 3</strong> Start Theme
+      Home
     </ion-title>
+    <!--
     <ion-buttons end>
       <button ion-button tappable (click)="presentNotifications($event)">
         <ion-icon name="notifications"></ion-icon>
@@ -15,24 +16,87 @@
         <ion-icon name="cog"></ion-icon>
       </button>
     </ion-buttons>
+  -->
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="animated fadeIn common-bg">
+<ion-content  class="animated fadeIn common-bg card-background-page">
 
-  <ion-card no-margin margin-bottom class="full-width">
-    <ion-item tappable (click)="choosePlace('from')" class="border-bottom">
-      <ion-icon name="search" color="primary" item-left></ion-icon>
-      <span>{{ search.name }}</span>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
-      <ion-datetime class="no-pl" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="search.date"></ion-datetime>
-    </ion-item>
-  </ion-card>
+    <ion-card >
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="../../assets/img/avatar.jpeg">
+          </ion-avatar>
+          <h2>Marty McFly</h2>
+          <p>November 5, 1955</p>
+        </ion-item>
+    </ion-card>
 
-  <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doSearch()">
-    <ion-icon name="search"></ion-icon> Search
-  </button>
+    <ion-card><ion-card-header text-center ><h1>News & Updates</h1></ion-card-header></ion-card>
+      <div padding-right padding-left>
+          <ion-list  text-wrap>
+              <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="../../assets/img/pic1.jpg">
+                </ion-thumbnail>
+                <h2>My Neighbor Totoro</h2>
+                <p>The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.</p>
+
+
+              </ion-item>
+              <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/img/pic2.jpg">
+                  </ion-thumbnail>
+                  <h2>My Neighbor Totoro</h2>
+                  <p>The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.</p>
+
+
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                      <img src="../../assets/img/pic3.jpg">
+                    </ion-thumbnail>
+                    <h2>My Neighbor Totoro</h2>
+                    <p>The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.</p>
+
+
+                  </ion-item>
+            </ion-list>
+          </div>
+
+          
+          <ion-card><ion-card-header text-center ><h1>Training Resources</h1></ion-card-header></ion-card>
+            <div padding-right padding-left>
+              <ion-list  text-wrap>
+                  <ion-item>
+                    <ion-thumbnail item-start>
+                      <img src="../../assets/img/pic1.jpg">
+                    </ion-thumbnail>
+                    <h2>My Neighbor Totoro</h2>
+                    <p>The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.</p>
+
+
+                  </ion-item>
+                  <ion-item>
+                      <ion-thumbnail item-start>
+                        <img src="../../assets/img/pic2.jpg">
+                      </ion-thumbnail>
+                      <h2>My Neighbor Totoro</h2>
+                      <p>The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.</p>
+
+
+                    </ion-item>
+                    <ion-item>
+                        <ion-thumbnail item-start>
+                          <img src="../../assets/img/pic3.jpg">
+                        </ion-thumbnail>
+                        <h2>My Neighbor Totoro</h2>
+                        <p>The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.</p>
+
+
+                      </ion-item>
+                </ion-list>
+              </div>
 
 </ion-content>
