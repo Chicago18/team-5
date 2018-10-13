@@ -51,9 +51,8 @@ import { AuthProvider } from '../providers/auth/auth';
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
-    ERG-page
     ERGsPage,
-    PopupERGPage
+    PopupERGPage,
     ProfilePage,
     EditProfilePage
   ],
@@ -84,7 +83,7 @@ import { AuthProvider } from '../providers/auth/auth';
     TripDetailPage,
     TripsPage,
     ERGsPage,
-    PopupERGPage
+    PopupERGPage,
     ProfilePage,
     EditProfilePage
   ],
@@ -95,7 +94,7 @@ import { AuthProvider } from '../providers/auth/auth';
     ActivityService,
     TripService,
     WeatherProvider,
-    ERGsService
+    ERGsService,
     AuthProvider
   ]
 })

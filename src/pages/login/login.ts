@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController, AlertController, ToastController, MenuController} from "ionic-angular";
 import {RegisterPage} from "../register/register";
+// eslint-disable-line
 import {ERGsPage} from "../ERGs/ERGs";
 import { HomePage } from "../home/home";
 
@@ -21,7 +22,7 @@ export class LoginPage {
 
   // login and go to home page
   login() {
-    this.nav.setRoot(ERGsPage);
+    this.nav.setRoot(HomePage);
   }
 
   forgotPass() {
