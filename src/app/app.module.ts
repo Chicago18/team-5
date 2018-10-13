@@ -26,6 +26,7 @@ import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import {ProfilePage} from "../pages/profile/profile";
 import {EditProfilePage} from "../pages/edit-profile/edit-profile";
+import { AuthProvider } from '../providers/auth/auth';
 
 // import services
 // end import services
@@ -61,7 +62,7 @@ import {EditProfilePage} from "../pages/edit-profile/edit-profile";
     IonicStorageModule.forRoot({
       name: '__ionic3_start_theme',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -85,7 +86,8 @@ import {EditProfilePage} from "../pages/edit-profile/edit-profile";
     Keyboard,
     ActivityService,
     TripService,
-    WeatherProvider
+    WeatherProvider,
+    AuthProvider
   ]
 })
 
