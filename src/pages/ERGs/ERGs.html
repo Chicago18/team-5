@@ -8,22 +8,19 @@
   
     <!--  -->
     <ion-toolbar padding color="light">
+            <button ion-text class="text-black" ng-click="filterPopup()">Filter</button>
             <ion-item>
                     <ion-label>
                       Search
                     </ion-label>
-                    <ion-input type="password"></ion-input>
+                <ion-input type="search-word"></ion-input>
                   </ion-item>
-    </ion-toolbar>
-    <span>
-        <button ion-text class="text-white">Filter</button>
-    </span>
-    <ion-toolbar padding color="light">
-      <p ion-text no-margin class="text-white">
-        <strong>4</strong> results found!   <!--make variable for search results-->
-      </p>
+                <p align="right" ion-text no-margin class="text-white">
+                    <strong>4</strong> results found!   <!--make variable for search results-->
+                </p>
     </ion-toolbar>
   </ion-header>
+
   
 
   <ion-content padding class="trips detail-bg">
@@ -44,7 +41,7 @@
                         <h2 ion-text class="text-white bold">Contact Info</h2>
                         </ion-col>
                         <ion-col col-2>
-                        <button ion-text class="text-white bold">More</button>
+                        <button ion-text class="text-white bold" tappable (click)="filterPopup()">More</button>
                     </ion-col>
                 </ion-row>                
             </ion-grid>
@@ -56,14 +53,14 @@
                     <h2 ion-text class="text-white bold">ERG Name</h2>
                     </ion-col>
                     <ion-col col-2>
-                    <span ion-text class="text-white bold">Location</span>                            </ion-col>
+                    <span ion-text class="text-white">Location</span>                            </ion-col>
                 </ion-row>
                 <ion-row>
                     <ion-col width-53>
                         <h2 ion-text class="text-white bold">Contact Info</h2>
                         </ion-col>
                         <ion-col col-2>
-                        <button ion-text class="text-white bold">More</button>
+                        <button ion-text class="text-white bold" tappable (click)="filterPopup()">More</button>
                     </ion-col>
                 </ion-row> 
             </ion-grid>

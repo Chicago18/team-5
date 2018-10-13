@@ -26,6 +26,7 @@ import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import {ERGsPage} from "../pages/ERGs/ERGs";
+import {PopupERGPage} from "../pages/popupERG/popupERG";
 
 // import services
 // end import services
@@ -47,7 +48,8 @@ import {ERGsPage} from "../pages/ERGs/ERGs";
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
-    ERGsPage
+    ERGsPage,
+    PopupERGPage
   ],
   imports: [
     BrowserModule,
@@ -75,7 +77,8 @@ import {ERGsPage} from "../pages/ERGs/ERGs";
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
-    ERGsPage
+    ERGsPage,
+    PopupERGPage
   ],
   providers: [
     StatusBar,
