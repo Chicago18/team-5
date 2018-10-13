@@ -32,8 +32,8 @@ import {ProfilePage} from "../pages/profile/profile";
 import {EditProfilePage} from "../pages/edit-profile/edit-profile";
 import { AuthProvider } from '../providers/auth/auth';
 import {TrainingPage} from '../pages/training/training';
-
-
+import {ErgPage} from '../pages/erg/erg';
+import {ErgprofilePage} from '../pages/ergprofile/ergprofile';
 
 // import services
 // end import services
@@ -59,7 +59,9 @@ import {TrainingPage} from '../pages/training/training';
     PopupERGPage,
     ProfilePage,
     EditProfilePage,
-    TrainingPage
+    TrainingPage,
+    ErgPage,
+    ErgprofilePage
   ],
   imports: [
     BrowserModule,
@@ -91,7 +93,9 @@ import {TrainingPage} from '../pages/training/training';
     PopupERGPage,
     ProfilePage,
     EditProfilePage,
-    TrainingPage
+    TrainingPage,
+    ErgPage,
+    ErgprofilePage
   ],
   providers: [
     StatusBar,
