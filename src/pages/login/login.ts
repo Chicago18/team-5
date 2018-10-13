@@ -1,9 +1,12 @@
 import {Component} from "@angular/core";
 import {NavController, AlertController, ToastController, MenuController} from "ionic-angular";
-import {HomePage} from "../home/home";
 import {RegisterPage} from "../register/register";
 import {Validators, FormBuilder, FormGroup } from "@angular/forms";
 import {AuthProvider} from "../../providers/auth/auth";
+// eslint-disable-line
+import {ERGsPage} from "../ERGs/ERGs";
+import { HomePage } from "../home/home";
+
 
 @Component({
   selector: 'page-login',
@@ -36,7 +39,7 @@ export class LoginPage {
   forgotPass() {
     let forgot = this.forgotCtrl.create({
       title: 'Forgot Password?',
-      message: "Enter you email address to send a reset link password.",
+      message: "Enter your email address to send a reset link password.",
       inputs: [
         {
           name: 'email',
