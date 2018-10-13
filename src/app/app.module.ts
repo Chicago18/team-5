@@ -11,6 +11,7 @@ import {Keyboard} from '@ionic-native/keyboard';
 import {ActivityService} from "../services/activity-service";
 import {TripService} from "../services/trip-service";
 import {WeatherProvider} from "../services/weather";
+import {ERGsService} from "../services/ERGs-service";
 
 import {MyApp} from "./app.component";
 
@@ -24,6 +25,8 @@ import {SearchLocationPage} from "../pages/search-location/search-location";
 import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
+import {ERGsPage} from "../pages/ERGs/ERGs";
+import {PopupERGPage} from "../pages/popupERG/popupERG";
 import {ProfilePage} from "../pages/profile/profile";
 import {EditProfilePage} from "../pages/edit-profile/edit-profile";
 import { AuthProvider } from '../providers/auth/auth';
@@ -48,6 +51,9 @@ import { AuthProvider } from '../providers/auth/auth';
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
+    ERG-page
+    ERGsPage,
+    PopupERGPage
     ProfilePage,
     EditProfilePage
   ],
@@ -77,6 +83,8 @@ import { AuthProvider } from '../providers/auth/auth';
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
+    ERGsPage,
+    PopupERGPage
     ProfilePage,
     EditProfilePage
   ],
@@ -87,6 +95,7 @@ import { AuthProvider } from '../providers/auth/auth';
     ActivityService,
     TripService,
     WeatherProvider,
+    ERGsService
     AuthProvider
   ]
 })
