@@ -9,6 +9,7 @@ import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { LocalWeatherPage } from "../pages/local-weather/local-weather";
 import { ProfilePage } from "../pages/profile/profile";
+import { EditProfilePage } from "../pages/edit-profile/edit-profile";
 
 export interface MenuItem {
     title: string;
@@ -23,7 +24,7 @@ export interface MenuItem {
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = EditProfilePage;
 
   appMenuItems: Array<MenuItem>;
 
