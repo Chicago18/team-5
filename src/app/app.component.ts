@@ -22,7 +22,7 @@ export interface MenuItem {
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = HomePage;
 
   appMenuItems: Array<MenuItem>;
 
@@ -36,7 +36,8 @@ export class MyApp {
 
     this.appMenuItems = [
       {title: 'Home', component: HomePage, icon: 'home'},
-      {title: 'Local Weather', component: LocalWeatherPage, icon: 'partly-sunny'}
+      {title: 'Local Weather', component: LocalWeatherPage, icon: 'partly-sunny'},
+
     ];
   }
 
