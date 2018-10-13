@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import firebase from 'firebase';
+import pick from 'lodash/pick';
+import assign from 'lodash/assign';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDsy1VZpSlGJ-03yY56lDABTQ7-nfXx_WQ",
@@ -9,6 +11,21 @@ const firebaseConfig = {
   storageBucket: "code-for-good-group-5.appspot.com",
   messagingSenderId: "150252170136"
 };
+
+const profileFields = [
+  'userID',
+  'email',
+  'firstName',
+  'lastName',
+  'pronouns',
+  'company',
+  'twitter',
+  'tags',
+  'jobTitle',
+  'email',
+  'facebook',
+  'linkedin'
+];
 
 /*
   Generated class for the AuthProvider provider.
@@ -39,5 +56,18 @@ export class AuthProvider {
           .set({ userID: newUser.user.uid, email: email, firstName: firstName, lastName: lastName});
       })
       .catch((error) => console.log('Error creating new user', error));
+  }
+
+  saveProfile(info: object) {
+    return firebase.firestore().collection('profile').doc('blgA4nqbmoc04IHRwb0q').update(info);
+  }
+
+  getProfile(email: string) {
+    return firebase.firestore().collection('profile').where('email', '==', email)
+      .get()
+      .then((snapshot) => {
+        const profile = assign({}, pick(snapshot.docs[0].data(), profileFields));
+        return profile;
+      });
   }
 }
