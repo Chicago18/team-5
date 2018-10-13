@@ -9,7 +9,7 @@ import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { LocalWeatherPage } from "../pages/local-weather/local-weather";
 import { ProfilePage } from "../pages/profile/profile";
-
+import {TrainingPage} from '../pages/training/training';
 export interface MenuItem {
     title: string;
     component: any;
@@ -37,8 +37,7 @@ export class MyApp {
 
     this.appMenuItems = [
       {title: 'Home', component: HomePage, icon: 'home'},
-      {title: 'Local Weather', component: LocalWeatherPage, icon: 'partly-sunny'},
-
+      {title: 'Resources & Trainings', component: TrainingPage, icon: 'paper'},
     ];
   }
 
@@ -72,6 +71,10 @@ export class MyApp {
   // go to user profile
   goToProfile() {
     this.nav.setRoot(ProfilePage);
+  }
+
+  goToTrainings(){
+    this.nav.setRoot(TrainingPage);
   }
 
 }

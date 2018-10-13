@@ -3,6 +3,7 @@ import {IonicApp, IonicModule} from "ionic-angular";
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import {IonicStorageModule} from '@ionic/storage';
+import {StreamingMedia} from '@ionic-native/streaming-media';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -27,6 +28,9 @@ import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import {ProfilePage} from "../pages/profile/profile";
 import {EditProfilePage} from "../pages/edit-profile/edit-profile";
 import { AuthProvider } from '../providers/auth/auth';
+import {TrainingPage} from '../pages/training/training';
+
+
 
 // import services
 // end import services
@@ -49,7 +53,8 @@ import { AuthProvider } from '../providers/auth/auth';
     TripDetailPage,
     TripsPage,
     ProfilePage,
-    EditProfilePage
+    EditProfilePage,
+    TrainingPage
   ],
   imports: [
     BrowserModule,
@@ -78,7 +83,8 @@ import { AuthProvider } from '../providers/auth/auth';
     TripDetailPage,
     TripsPage,
     ProfilePage,
-    EditProfilePage
+    EditProfilePage,
+    TrainingPage
   ],
   providers: [
     StatusBar,
@@ -87,7 +93,8 @@ import { AuthProvider } from '../providers/auth/auth';
     ActivityService,
     TripService,
     WeatherProvider,
-    AuthProvider
+    AuthProvider,
+    StreamingMedia
   ]
 })
 
