@@ -70,4 +70,8 @@ export class AuthProvider {
         return profile;
       });
   }
+  logoutUser() {
+    return firebase.auth().signOut();
+  }
+
 }

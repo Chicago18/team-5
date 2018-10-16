@@ -1,0 +1,117 @@
+<!--
+  Generated template for the TrainingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- -->
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Resources & Trainings
+      </ion-title>
+      <!--
+      <ion-buttons end>
+        <button ion-button tappable (click)="presentNotifications($event)">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+        <button ion-button tappable (click)="goToAccount()">
+          <ion-icon name="cog"></ion-icon>
+        </button>
+      </ion-buttons>
+    -->
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content >
+
+    <div padding>
+      <div>
+        <ion-segment [(ngModel)]="type">
+          <ion-segment-button value="resources">
+            Resources
+          </ion-segment-button>
+          <ion-segment-button value="training">
+            Trainings
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      <!-- *ngSwitchCase="'resources'" -->
+      <div [ngSwitch]="type" >
+          <ion-card *ngSwitchCase="'resources'">
+              <ion-card-header>
+                  JPMorgan Chase and Out & Equal: A Force to Be Reckoned With
+              </ion-card-header>
+              <ion-card-content>
+                  Today, Out & Equal is very proud to announce our participation in JPMorgan Chase’s distinguished Force for Good program...
+              </ion-card-content>
+              <div padding-bottom padding-right padding-left>
+                  <button ion-button round small full onclick="window.open('http://outandequal.org/jpmorgan-chase-and-out-equal-a-force-to-be-reckoned-with/', '_system', 'location=yes'); return false;" >Full Article</button>
+              </div>
+            </ion-card>
+            <ion-card *ngSwitchCase="'resources'">
+                <ion-card-header>
+                    Comprehensive Approach: Transgender Inclusive Workplaces in India
+                </ion-card-header>
+                <ion-card-content>
+                    On September 19th, Out & Equal hosted a webinar entitled, “Comprehensive Approach: Transgender Inclusive Workplaces in India” as part of our bimonthly global webinar series...
+                </ion-card-content>
+                <div padding-bottom padding-right padding-left>
+                    <button ion-button round small full onclick="window.open('http://outandequal.org/comprehensive-approach-transgender-inclusive-workplaces-in-india/', '_system', 'location=yes'); return false;" >Full Article</button>
+                </div>
+                
+              </ion-card>
+
+              <ion-card *ngSwitchCase="'training'">
+                  <img src="../../assets/img/gws.png"/>
+                  <ion-card-content>
+                    <ion-card-title>
+                        Perspectives on LGBT Workplace Equality in Canada
+                      </ion-card-title>
+                    <p>
+                        Join Out & Equal and our panel of Canada experts who will discuss their companies’ leading-edge initiatives to engage and support LGBT and ally employees in Canada.
+                    </p>
+                    <div padding>
+                        <button ion-button round small full ion-button onclick="window.open('https://youtu.be/lGJfvxW6Wuw', '_system', 'location=yes'); return false;" >Play Video</button>
+                    </div>
+                  </ion-card-content>
+            </ion-card>
+
+          <ion-card *ngSwitchCase="'training'">
+               
+              <img src="../../assets/img/gws.png"/>
+              <ion-card-content>
+                <ion-card-title>
+                    Corporate Advocacy on Global LGBTQ Issues
+                  </ion-card-title>
+                <p>
+                    This webinar will discuss the ways in which LGBTQ and ally leaders can navigate those challenges and overcome potential resistance within their companies to harness high-level support for LGBTQ equality efforts in diverse international regions.
+                </p>
+                <div padding>
+                    <button ion-button round small full onclick="window.open('https://youtu.be/uLc6HxY9-hY', '_system', 'location=yes'); return false;">Play Video</button>
+                </div>
+              </ion-card-content>
+        </ion-card>
+
+        <ion-card *ngSwitchCase="'training'">
+               
+            <img src="../../assets/img/gws.png"/>
+            <ion-card-content>
+              <ion-card-title>
+                  Columbia and Workplace Equality
+                </ion-card-title>
+              <p>
+                  The country has been increasingly lauded as one of the more progressive countries in Latin America for LGBT rights: laws making it easier to legally change one’s gender identity and legalizing same-sex marriage were passed in 2015 and 2016, respectively, and measures protecting employees from discrimination based on sexual orientation have been on the books since 2011.
+              </p>
+              <div padding>
+                  <button ion-button round  small full onclick="window.open('https://youtu.be/PGidncz7EkA', '_system', 'location=yes'); return false;"  >Play Video</button>
+              </div>
+            </ion-card-content>
+      </ion-card>
+          </div>
+      </div>
+</ion-content>

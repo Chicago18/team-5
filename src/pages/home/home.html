@@ -22,13 +22,13 @@
 
 <ion-content  class="animated fadeIn common-bg card-background-page">
 
-    <ion-card >
+    <ion-card (click)="goToProfile()">
         <ion-item>
           <ion-avatar item-start>
-            <img src="../../assets/img/avatar.jpeg">
+            <img src="../../assets/img/girl_avatar.png">
           </ion-avatar>
-          <h2>Marty McFly</h2>
-          <p>November 5, 1955</p>
+          <h2>Jane Doe</h2>
+          <p>Customer</p>
         </ion-item>
     </ion-card>
 
@@ -59,13 +59,11 @@
                     </ion-thumbnail>
                     <h2>My Neighbor Totoro</h2>
                     <p>The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.</p>
-
-
                   </ion-item>
             </ion-list>
           </div>
 
-          
+          <div class= "correctMargin">
           <ion-card><ion-card-header text-center ><h1>Training Resources</h1></ion-card-header></ion-card>
             <div padding-right padding-left>
               <ion-list  text-wrap>
@@ -98,5 +96,5 @@
                       </ion-item>
                 </ion-list>
               </div>
-
+            </div>
 </ion-content>

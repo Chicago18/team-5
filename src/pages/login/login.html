@@ -8,13 +8,13 @@
     </div>
 
     <!-- Login form -->
-    <form class="list-form">
+    <form class="list-form" [formGroup]="loginForm" (ngSubmit)="login()">
       <ion-item>
         <ion-label floating>
 
           Email
         </ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-input type="email" formControlName="email"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -22,14 +22,15 @@
 
           Password
         </ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
     </form>
+    <div *ngIf="error" align-items-center="true">
+      <p style="color: red">Incorrect email or password.</p>
+    </div>
 
-    <p text-right ion-text color="secondary" tappable (click)="forgotPass()"><strong>Forgot Password?</strong></p>
-
-    <div>
-      <button ion-button icon-start block color="dark" tappable (click)="login()">
+    <div padding-top>
+      <button ion-button icon-start block color="dark" [disabled]="" tappable (click)="login()">
         Sign In
       </button>
     </div>
@@ -41,7 +42,5 @@
         Sign Up
       </button>
     </div>
-
-
   </div>
 </ion-content>

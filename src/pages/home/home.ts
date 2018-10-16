@@ -6,6 +6,7 @@ import {NotificationsPage} from "../notifications/notifications";
 import {SettingsPage} from "../settings/settings";
 import {TripsPage} from "../trips/trips";
 import {SearchLocationPage} from "../search-location/search-location";
+import { ProfilePage } from "../profile/profile";
 
 
 @Component({
@@ -58,6 +59,10 @@ export class HomePage {
     popover.present({
       ev: myEvent
     });
+  }
+
+  goToProfile() {
+    this.nav.setRoot(ProfilePage);
   }
 
 }

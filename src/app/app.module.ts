@@ -3,6 +3,7 @@ import {IonicApp, IonicModule} from "ionic-angular";
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import {IonicStorageModule} from '@ionic/storage';
+import {StreamingMedia} from '@ionic-native/streaming-media';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -30,6 +31,11 @@ import {PopupERGPage} from "../pages/popupERG/popupERG";
 import {ProfilePage} from "../pages/profile/profile";
 import {EditProfilePage} from "../pages/edit-profile/edit-profile";
 import { AuthProvider } from '../providers/auth/auth';
+import {TrainingPage} from '../pages/training/training';
+import {ErgPage} from '../pages/erg/erg';
+import {ErgprofilePage} from '../pages/ergprofile/ergprofile';
+import {ErrorMessageComponent} from "../components/error-message/error-message";
+
 
 // import services
 // end import services
@@ -54,7 +60,11 @@ import { AuthProvider } from '../providers/auth/auth';
     ERGsPage,
     PopupERGPage,
     ProfilePage,
-    EditProfilePage
+    EditProfilePage,
+    TrainingPage,
+    ErgPage,
+    ErgprofilePage,
+    ErrorMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +95,11 @@ import { AuthProvider } from '../providers/auth/auth';
     ERGsPage,
     PopupERGPage,
     ProfilePage,
-    EditProfilePage
+    EditProfilePage,
+    TrainingPage,
+    ErgPage,
+    ErgprofilePage,
+    ErrorMessageComponent
   ],
   providers: [
     StatusBar,
@@ -94,8 +108,9 @@ import { AuthProvider } from '../providers/auth/auth';
     ActivityService,
     TripService,
     WeatherProvider,
-    ERGsService,
-    AuthProvider
+    AuthProvider,
+    StreamingMedia,
+    ERGsService
   ]
 })
 
